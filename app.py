@@ -44,7 +44,8 @@ st.title("Conversation RAG with PDF uploads and chat history")
 st.write("Upload PDF")
 
 # Groq API key
-groq_api_key = os.getenv("GROQ_API_KEY")
+# groq_api_key = os.getenv("GROQ_API_KEY")
+groq_api_key = st.secrets["GROQ_API_KEY"]
 
 # Initializing LLM
 llm = ChatGroq(groq_api_key=groq_api_key, model_name="llama-3.1-8b-instant")
