@@ -32,7 +32,8 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_core.prompts import ChatPromptTemplate
 
-os.environ['HF_TOKEN'] = os.getenv("HF_TOKEN")
+# os.environ['HF_TOKEN'] = os.getenv("HF_TOKEN")
+os.environ['HF_TOKEN'] = st.secrets["HF_TOKEN"]
 hf_embeddings = HuggingFaceEmbeddings(
                     model_name = "all-MiniLM-L6-v2",
                     model_kwargs={"device": "cpu"}
